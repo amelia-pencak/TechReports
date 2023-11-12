@@ -111,3 +111,28 @@ body {
      /* margin: 10px; */
  }
  
+
+ #scrollToTopButton {
+    position: fixed; 
+    justify-content: center;
+    align-content: center;
+    padding-bottom: 5px;
+    bottom: 20px; 
+    right: 10px;
+    width: 50px;
+    height: 50px; 
+    border-radius: 50%; 
+    font-size: 25px; 
+    border: none; 
+    background-color: black;
+    color: white; 
+    cursor: pointer; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3); 
+    transition: background-color 2s linear 0s;
+
+}
+
+#scrollToTopButton:hover {
+    background-color: white;
+    color: black;
+}

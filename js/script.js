@@ -33,4 +33,10 @@ function rotateWord() {
 setInterval(rotateWord, 3000);
 
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('scrollToTopButton').addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+
 
