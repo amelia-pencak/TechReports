@@ -1,0 +1,62 @@
+.contact_page {
+     display: flex;
+     flex-direction: column;
+     /* margin-left: 20px; */
+     flex-wrap: wrap;
+     justify-content: left;
+     align-items: left;
+}
+
+.contact_title {
+     font-size: 40px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.contact_map_open_hours {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     align-items: left;
+}
+
+.map {
+     height: 350px;
+     width: 500px;
+     left: 0;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     border-radius: 10px;
+     border: 3px solid black;
+     /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); */
+}
+
+.find_us {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     text-shadow: 0px -40px 1px rgb(0, 22, 164), 0px 40px 1px rgb(164, 90, 0),  0px -80px 2px rgb(0, 22, 164), 0px 80px 2px rgb(164, 90, 0),
+     0px -120px 3px rgb(0, 22, 164), 0px 120px 3px rgb(164, 90, 0);
+     font-size: 20px;
+     font-weight: 900;
+     
+}
+
+.contact_open_hours {
+     height: 350px;
+     margin-top: 10px;
+     margin-bottom: 35px;
+}
+
+th, td {
+     border: 2px solid black; 
+     text-align: center; 
+     font-size: 12px;
+     padding: 4px;
+ 
+}
+
+
