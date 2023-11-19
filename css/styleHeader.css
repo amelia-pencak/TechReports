@@ -69,7 +69,50 @@ a {
      height: 24px;
 }
 
+ .menu_toggle {
+     display: none; 
+     flex-direction: column;
+     cursor: pointer;
+ }
+ 
+ .menu_toggle .bar {
+     height: 1px;
+     width: 15px;
+     padding: 0.5px;
+     margin: 2px auto;
+     background-color: black;
+ }
 
+
+@media screen and (max-width: 900px) {
+     .header_menu_links {
+         display: none;
+         top: 100px;
+         background-color: darkcyan;
+         width: 100%;
+         right: 100px;
+         margin: 20px;
+         flex-direction: column;
+     }
+ 
+     .header_menu_links li {
+         text-align: center;
+         padding: 10px 0;
+         top: 100px;
+       
+     }
+ 
+     .menu_toggle {
+          /* position: relative; */
+         display: none;
+         color: black;
+         width: 10px;
+         cursor: pointer;
+         
+     }
+
+    
+ }
 
 
 
