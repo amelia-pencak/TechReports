@@ -56,7 +56,61 @@ th, td {
      text-align: center; 
      font-size: 12px;
      padding: 4px;
- 
 }
 
+
+#contact-form {
+     display: flex;
+     flex-direction: column;
+     flex-wrap: wrap;
+     justify-content: left;
+     align-items: left;
+     width: 400px;
+     max-width: 500px;
+     margin: 0 auto;
+     padding: 20px;
+     background-color: #f7f7f7;
+     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+ }
+ .contact_form label {
+     font-size: 15px;
+     font-weight: 700;
+     margin: 5px;
+}
+
+.contact_form input[type="text"],
+.contact_form input[type="email"],
+.contact_form input[type="tel"] {
+     padding: 10px;
+     margin-bottom: 20px;
+     border: 1px solid black;
+     border-radius: 4px;
+     box-sizing: border-box; 
+}
+
+.contact_form textarea {
+     padding: 10px;
+     margin-bottom: 20px;
+     border: 1px solid black;
+     border-radius: 4px;
+     box-sizing: border-box;
+}
+
+.button_container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+ .contact_form button[type="submit"] {
+     width: 100px;
+     padding: 10px;
+     background-color: white;
+     border: 1px solid black;
+     color: black;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     font-size: 16px;
+ }
 
