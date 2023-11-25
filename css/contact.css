@@ -20,12 +20,12 @@
      align-items: center;
 }
 
+
 .map {
      height: 350px;
      width: 500px;
      left: 0;
-     margin-top: 10px;
-     margin-bottom: 10px;
+     margin: 10px 20px;
      border-radius: 10px;
      border: 3px solid black;
 }
@@ -39,13 +39,13 @@
      0px -120px 3px rgb(0, 22, 164), 0px 120px 3px rgb(164, 90, 0);
      font-size: 25px;
      font-weight: 900;
+     margin: 10px 20px;
      
 }
 
 .contact_open_hours {
      height: 350px;
-     margin-top: 10px;
-     margin-bottom: 35px;
+     margin: 10px 20px 35px 20px;
 }
 
 th, td {
@@ -54,6 +54,124 @@ th, td {
      font-size: 12px;
      padding: 4px;
 }
+
+
+.container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 400px;
+    
+   }
+   
+   .slider_wrapper {
+     width: 650px;
+     height: 400px;
+     overflow: hidden;
+   }
+   
+   .inner_wrapper {
+     width: 400%;
+     height: 100%;
+     position: relative;
+     left: -100%;
+   
+   }
+   
+   .slide {
+     border: black 2px solid;
+     width: 25%;
+     height: 100%;
+     float: left;
+     position: relative;
+     overflow: hidden;
+     justify-content: center;
+     align-items: center;
+   }
+
+   .slide img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover; /* Zapewnia odpowiednie skalowanie bez deformacji */
+     object-position: center; /* Wyśrodkowanie obrazów */
+ }
+ 
+   
+   .button {
+     width: 30px;
+     height: 30px;
+     border-top: 2px solid black;
+     position: absolute;
+     cursor: pointer;
+   }
+   
+   .prev {
+     border-left: 2px solid black;
+     left: 10%;
+     transform: rotate(-45deg);
+   }
+   
+   .next {
+     border-right: 2px solid black;
+     right: 10%;
+     transform: rotate(45deg);
+   }
+/* 
+.container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 200px;
+}
+
+.slider_out {
+     width: 600px;
+     height: 300px;
+     overflow: hidden;
+}
+
+.slider_in {
+     width: 500%;
+     height: 100%;
+     position: relative;
+}
+
+.slider_in img {
+     display: none;
+     width: 500px;
+     height: 300px;
+}
+
+.slide {
+     width: calc(100% / 5);
+     height: 100%;
+     float: left;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.button {
+     width: 30px;
+     height: 30px;
+     border-top: 2px solid black;
+     position: absolute;
+     cursor: pointer;
+}
+
+.prev {
+    border-left: 2px solid black;
+    left: 10%;
+    transform: rotate(-45deg);
+
+}
+
+.next {
+     border-right: 2px solid black;
+     right: 10%;
+     transform: rotate(45deg);
+}
+  */
 
 .contact_us_contact_form {
      display: flex;
@@ -67,7 +185,7 @@ th, td {
 }
 
 .full_width_line {
-     width: 50%;
+     width: 70%;
      height: 2px; 
      background-color: black;
      margin: 20px; 

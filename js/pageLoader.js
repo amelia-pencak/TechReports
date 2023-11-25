@@ -7,11 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
                  .then(response => response.text())
                  .then(data => {
                      document.getElementById('content').innerHTML = data;
+                     initializeSlider();
                  })
                  .catch(error => console.error('Błąd ładowania strony', error));
          });
      });
  });
+
+
  
-
-
