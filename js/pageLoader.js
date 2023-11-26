@@ -11,6 +11,7 @@
                 .then(data => {
                     document.getElementById('content').innerHTML = data;
                     initializeSlider();
+                    numberAnimator();
                 })
                 .catch(error => console.error('Błąd ładowania strony', error));
         });

@@ -20,6 +20,15 @@
      width: 100%;
 }
 
+.about_us_title {
+     font-size: 40px;
+}
+
+.about_us_text {
+     text-align: left;
+     margin-left: 15px;
+}
+
 .about_us_photo {
      height: 320px;
      width: 500px;
@@ -29,6 +38,7 @@
 }
 
 .stats_container {
+     margin: 25px 0;
      display: flex;
      background-color: rgb(0, 22, 164);
      color: white;
