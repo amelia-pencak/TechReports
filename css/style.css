@@ -1,5 +1,4 @@
 body {
-    /* font-family: "Trebuchet MS", Helvetica, sans-serif; */
     font-family: 'Poppins', sans-serif;
     margin: 0;
     background-color: #EAEAEA;
@@ -22,6 +21,7 @@ body {
 }
 
 
+
 .rotating {
     transform: rotateX(90deg);
     opacity: 0;
@@ -33,7 +33,6 @@ body {
     width: calc(100% - 100px);
     margin: 0 50px;
     display: block;
-    /* border: 2px solid #00acee;  */
     font: italic bold 26px/1 "Ubuntu", sans-serif;
     text-align: center;
     border: none;
@@ -172,6 +171,7 @@ body {
 .opinions_section {
     margin: 20px;
     display: grid;
+
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 35px;
@@ -194,6 +194,7 @@ body {
 .personal_data {
     font-weight: 900;
     margin-left: 20px;
+    margin-top: 15px;
 }
 
 .text_opinion {
@@ -209,14 +210,12 @@ body {
     margin-left: 10px;
 }
 
+
 #content {
     min-height: 200px;
-    /* padding: 10px; */
     display: flex;
     flex-direction: column;
-    /* justify-content: center;
-    align-items: center; */
-    /* margin: 10px; */
+    align-items: center;
 }
 
 #button_scroll_to_top {
@@ -241,4 +240,31 @@ body {
 #button_scroll_to_top:hover {
     background-color: white;
     color: black;
+}
+
+
+
+@media screen and (max-width: 680px){
+    .future_text {
+        width: 450px;
+        text-align: center; 
+    }
+    .main_section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 250px;
+    }
+
+    #dynamicWord {
+        display: flex;
+        align-self: center;
+        transition: transform 0.5s, opacity 0.5s;
+        transform-origin: bottom center;
+        margin-left: 10px;
+    }
+
+    .opinions_section{
+        grid-template-columns:1fr;
+    }
 }
