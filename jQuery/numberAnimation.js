@@ -14,7 +14,7 @@ function numberAnimator() {
      }
      function startAnimation() {
           $('.number').each(function () {
-               var number = $(this).attr('data_number');
+               var number = $(this).attr('data-number');
                $(this).animateNumber({
                     number: number,
                     numberStep: function (now, tween) {

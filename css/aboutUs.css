@@ -1,12 +1,18 @@
 .about_us_page {
-     margin: 0 20px;
+     
      display: flex;
      flex-direction: column;
 }
 
-.about_us_container {
+.about_us_and_stats {
      display: flex;
-     /* flex-wrap: wrap; */
+     flex-direction: column;
+     margin: 0 20px;
+}
+
+.about_us_container {
+     
+     display: flex;
      flex-direction: row;
      justify-content: space-evenly;
      align-items: center;
@@ -38,9 +44,9 @@
 }
 
 .stats_container {
-     margin: 25px 0;
+     margin: 25px 15px;
      display: flex;
-     background-color: rgb(0, 22, 164);
+     background-color: #00aff0;
      color: white;
      padding: 20px;
      justify-content: space-around;
@@ -60,9 +66,46 @@
      font-size: 24px;
 }
 
+
+
+
 .management_team {
-     grid-column: 2/5;
-     grid-row: 4/8;
+     display: flex;
+     flex-direction: column;
+     /* justify-content: space-evenly; */
+     /* align-items: center; */
+}
+
+.management_team_intro {
+     height: auto;
+     background-color: #91ddf4;
+     width: 100%;
+    
+}
+
+.management_title {
+     font-size: 40px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     margin: 25px 0 0 35px;
+     width: 400px
+}
+
+.management_team_intro .full_width_line {
+     width: 50%;
+     height: 2px; 
+     background-color: black;
+     margin: 20px 0 20px 35px; 
+}
+
+.management_description {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     align-items: center;
+     margin: 25px 35px;
+     width: 450px;
 }
 
 @media screen and (max-width: 912px) {
