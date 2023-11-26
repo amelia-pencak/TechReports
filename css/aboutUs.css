@@ -1,5 +1,5 @@
 .about_us_page {
-     
+
      display: flex;
      flex-direction: column;
 }
@@ -11,7 +11,7 @@
 }
 
 .about_us_container {
-     
+
      display: flex;
      flex-direction: row;
      justify-content: space-evenly;
@@ -66,21 +66,18 @@
      font-size: 24px;
 }
 
-
-
-
 .management_team {
      display: flex;
      flex-direction: column;
-     /* justify-content: space-evenly; */
-     /* align-items: center; */
+
 }
 
 .management_team_intro {
      height: auto;
      background-color: #91ddf4;
      width: 100%;
-    
+     margin: 20px 0px 40px 0px;
+
 }
 
 .management_title {
@@ -94,9 +91,9 @@
 
 .management_team_intro .full_width_line {
      width: 50%;
-     height: 2px; 
+     height: 2px;
      background-color: black;
-     margin: 20px 0 20px 35px; 
+     margin: 20px 0 20px 35px;
 }
 
 .management_description {
@@ -108,6 +105,75 @@
      width: 450px;
 }
 
+.management_cards_container {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-items: center;
+}
+
+.management_card {
+     margin: 100px 35px;
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: space-evenly;
+     align-items: center;
+     height: auto;
+     background-color: #91ddf4;
+     -webkit-box-shadow: 0px 0px 67px 60px #91ddf4;
+     -moz-box-shadow: 0px 0px 67px 60px #91ddf4;
+     box-shadow: 0px 0px 67px 60px #91ddf4;
+
+}
+
+.management_card_info {
+     display: flex;
+     flex-direction: column;
+     padding: 15px;
+     width: 450px;
+     height: auto;
+}
+
+.management_card_role {
+     font-size: 20px;
+}
+
+.management_card_name {
+     font-size: 40px;
+     font-weight: bold;
+}
+
+.management_card_description {
+     font-size: 20px;
+     margin: 10px 0 15px 0;
+}
+
+.management_card_photo {
+     height: auto;
+     width: 300px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   
+}
+
+.photo {
+     height: 390px;
+     width: 280px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 5%;
+     border: black 2px solid;
+}
+
+
+.social_media {
+     border-radius: 55%;
+     height: 31px;
+     width: 31px;
+}
 @media screen and (max-width: 912px) {
      .about_us_container {
           flex-wrap: wrap;
