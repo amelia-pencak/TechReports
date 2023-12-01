@@ -6,7 +6,6 @@
 
 header {
      width: 100%;
-     /* min-width: 400px; */
      height: 100px;
 }
 
@@ -26,7 +25,6 @@ a {
      font-size: large;
      display: flex;
      flex-direction: row;
-     /* flex-wrap: wrap; */
      justify-content: space-between;
      align-items: center;
      padding-right: 15px;
@@ -52,8 +50,6 @@ a {
      padding: 0 30px;
      width: 100%;  
 }
-
-
 
 .nav_link:hover {
      color: rgb(0, 22, 164);
@@ -97,6 +93,19 @@ a {
 }
 
 @media screen and (max-width: 912px) {
+     header {
+          height: auto; 
+          max-width: 912px;
+      }
+  
+      .logo {
+          font-size: 45px; 
+      }
+  
+      .nav_bar {
+          justify-content: space-between; 
+          padding: 0 10px;
+      }
      .menu_toggle {
           display: block;
          
@@ -113,7 +122,6 @@ a {
      }
 
      .nav_item {
-          /* background-color: rgb(115, 114, 114); */
           background-color: rgba(71, 71, 71, 0.94); 
           position: fixed;
           left:-100%;

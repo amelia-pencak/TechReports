@@ -23,7 +23,8 @@
      flex-direction: column;
      justify-content: space-evenly;
      align-items: center;
-     width: 100%;
+     padding: 10px;
+     margin: 15px;
 }
 
 .about_us_title {
@@ -31,7 +32,7 @@
 }
 
 .about_us_text {
-     text-align: left;
+     text-align: justify;
      margin-left: 15px;
 }
 
@@ -174,12 +175,45 @@
      height: 31px;
      width: 31px;
 }
-@media screen and (max-width: 912px) {
-     .about_us_container {
-          flex-wrap: wrap;
-     }
 
-     .stats_container {
-          flex-wrap: wrap;
+@media screen and (max-width: 912px) {
+     .about_us_page {
+         align-items: center;
+         justify-content: center;
      }
-}
+ 
+     .about_us_container {
+         flex-direction: column;
+         margin: 10px;
+     }
+ 
+     .about_us_photo {
+         width: 100%;
+         height: auto;
+         max-width: 500px;
+     }
+ 
+     .stats_container {
+         flex-direction: column;
+         margin: 10px;
+     }
+ 
+     .management_card {
+         flex-direction: column;
+         width: 80%;
+         margin: 30px;
+     }
+ 
+     .management_card_photo, .management_card_info {
+         width: 80%;
+         text-align: center;
+         margin: 10px;
+     }
+ 
+     .photo {
+         max-width: 100%;
+         height: auto;
+     }
+ }
+ 
+ 
