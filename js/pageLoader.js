@@ -1,5 +1,5 @@
  document.addEventListener('DOMContentLoaded', function() {
-    document.querySelectorAll('nav a').forEach(link => {
+    document.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', function(e) {
             if (e.target.href.endsWith('index.html') ) {
                 return;
@@ -12,6 +12,7 @@
                     document.getElementById('content').innerHTML = data;
                     initializeSlider();
                     numberAnimator();
+                    dynamicList();
                 })
                 .catch(error => console.error('Błąd ładowania strony', error));
         });
