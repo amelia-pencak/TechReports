@@ -1,111 +1,108 @@
-<script src="https://code.jquery.com/jquery-3.7.1.js" 
-integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
-crossorigin="anonymous"></script> 
-<div class="contact_page" >
-     <h1 class="contact_title">Kontakt</h1>
-     <div class="full_width_line"></div>
-     <div class="contact_map_open_hours">
-          <div class="contact_map">
-               <iframe
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=16.897745132446293%2C52.39555183743724%2C16.904643774032596%2C52.39776460284097&amp;layer=mapnik&amp;marker=52.396658234008484%2C16.90119445323944"
-                    class="map">
-               </iframe>
-               <br />
-               <small class="larger_map_button">
-                    <a href="https://www.openstreetmap.org/?mlat=52.39666&amp;mlon=16.90119#map=18/52.39666/16.90119">
-                         View Larger Map</a>
-               </small>
-          </div>
-          <div class="find_us">
-               Znajdź nas!
-          </div>
-          <table class="contact_open_hours">
-               <tr>
-                    <th>Dzień</th>
-                    <th>Godziny otwarcia</th>
-               </tr>
-               <tr>
-                    <td>Poniedziałek</td>
-                    <td>9:00 - 17:00</td>
-               </tr>
-               <tr>
-                    <td>Wtorek</td>
-                    <td>9:00 - 17:00</td>
-               </tr>
-               <tr>
-                    <td>Środa</td>
-                    <td>9:00 - 17:00</td>
-               </tr>
-               <tr>
-                    <td>Czwartek</td>
-                    <td>9:00 - 17:00</td>
-               </tr>
-               <tr>
-                    <td>Piątek</td>
-                    <td>9:00 - 17:00</td>
-               </tr>
-               <tr>
-                    <td>Sobota</td>
-                    <td>9:00 - 13:00</td>
-               </tr>
-               <tr>
-                    <td>Niedziela</td>
-                    <td>Nieczynne</td>
-               </tr>
-          </table>
-     </div>
-  
-     <div class="container">
-
-          <div class="slider_wrapper">
-            <div class="inner_wrapper">
-              <div class="slide"><img src="/images/building1.jpg"></div>
-              <div class="slide"><img src="/images/building2.png"></div>
-              <div class="slide"><img src="/images/building3.jpg"></div>
-              <div class="slide"><img src="/images/building4.jpg"></div>
-            </div>
-          </div>
-      
-          <div class="button prev"></div>
-          <div class="button next"></div>
-        </div>
-
-        
-
-
-     <div class="contact_us_contact_form">
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+     <title>TechReports</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+     <div class="contact_page">
+          <h1 class="contact_title">Kontakt</h1>
           <div class="full_width_line"></div>
-
-          <div class="contact_us">
-               Albo skontaktu się z nami!
-          </div>
-          <div class="full_width_line"></div>
-          <form class="contact_form">
-               <label for="fullName">
-                    Imię i nazwisko:
-               </label>
-               <input type="text" id="fullName" name="fullName">
-               <label for="email">
-                    E-mail:
-               </label>
-               <input type="email" id="email" name="email">
-               <label for="phone">
-                    Telefon:
-               </label>
-               <input type="tel" id="phone" name="phone">
-               <label for="topic">
-                    Temat:
-               </label>
-               <input type="text" id="topic" name="topic">
-               <label for="message">
-                    Wiadomość:
-               </label>
-               <textarea id="message" name="message"></textarea>
-               <div class="button_container">
-                    <button type="submit">Wyślij</button>
+          <div class="contact_map_open_hours">
+               <div class="contact_map">
+                    <iframe
+                         src="https://www.openstreetmap.org/export/embed.html?bbox=16.897745132446293%2C52.39555183743724%2C16.904643774032596%2C52.39776460284097&amp;layer=mapnik&amp;marker=52.396658234008484%2C16.90119445323944"
+                         class="map">
+                    </iframe>
+                    <small class="larger_map_button">
+                         <a
+                              href="https://www.openstreetmap.org/?mlat=52.39666&amp;mlon=16.90119#map=18/52.39666/16.90119">
+                              View Larger Map</a>
+                    </small>
                </div>
-          </form>
+               <div class="find_us">
+                    Znajdź nas!
+               </div>
+               <table class="contact_open_hours">
+                    <tr>
+                         <th>Dzień</th>
+                         <th>Godziny otwarcia</th>
+                    </tr>
+                    <tr>
+                         <td>Poniedziałek</td>
+                         <td>9:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                         <td>Wtorek</td>
+                         <td>9:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                         <td>Środa</td>
+                         <td>9:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                         <td>Czwartek</td>
+                         <td>9:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                         <td>Piątek</td>
+                         <td>9:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                         <td>Sobota</td>
+                         <td>9:00 - 13:00</td>
+                    </tr>
+                    <tr>
+                         <td>Niedziela</td>
+                         <td>Nieczynne</td>
+                    </tr>
+               </table>
+          </div>
+          <div class="container">
+               <div class="slider_wrapper">
+                    <div class="inner_wrapper">
+                         <div class="slide"><img alt="budynek" src="/images/building1.jpg"></div>
+                         <div class="slide"><img alt="budynek" src="/images/building2.png"></div>
+                         <div class="slide"><img alt="budynek" src="/images/building3.jpg"></div>
+                         <div class="slide"><img alt="budynek" src="/images/building4.jpg"></div>
+                    </div>
+               </div>
+               <div class="button prev"></div>
+               <div class="button next"></div>
+          </div>
+          <div class="contact_us_contact_form">
+               <div class="full_width_line"></div>
 
+               <div class="contact_us">
+                    Albo skontaktu się z nami!
+               </div>
+               <div class="full_width_line"></div>
+               <form class="contact_form">
+                    <label for="fullName">
+                         Imię i nazwisko:
+                    </label>
+                    <input type="text" id="fullName" name="fullName">
+                    <label for="email">
+                         E-mail:
+                    </label>
+                    <input type="email" id="email" name="email">
+                    <label for="phone">
+                         Telefon:
+                    </label>
+                    <input type="tel" id="phone" name="phone">
+                    <label for="topic">
+                         Temat:
+                    </label>
+                    <input type="text" id="topic" name="topic">
+                    <label for="message">
+                         Wiadomość:
+                    </label>
+                    <textarea id="message" name="message"></textarea>
+                    <div class="button_container">
+                         <button type="submit">Wyślij</button>
+                    </div>
+               </form>
+          </div>
      </div>
-
-</div>
+</body>
