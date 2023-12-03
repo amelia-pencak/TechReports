@@ -1,0 +1,265 @@
+.services_page {
+
+     display: flex;
+     flex-direction: column;
+}
+
+.services_container {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-evenly;
+}
+
+.services {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: space-evenly;
+     margin: 20px 25px;
+     padding: 10px;
+}
+
+.service_title {
+     font-size: 40px;
+}
+
+.service_text {
+     text-align: justify;
+     margin-left: 15px;
+}
+
+.services_photo_container {
+     margin: 10px;
+}
+
+.services_photo {
+     height: 320px;
+     width: 500px;
+     border-radius: 15%;
+     -webkit-mask-image: -webkit-radial-gradient(center, ellipse, white 40%, transparent 72%);
+     mask-image: radial-gradient(ellipse at center, white 60%, transparent 70%);
+
+}
+
+.companies_container {
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     justify-content: space-between;
+     margin: 40px 100px;
+     padding: 10px;
+}
+
+.company_img {
+     height: 61px;
+     width: 110px;
+     filter: grayscale(100%);
+     transition: filter 0.2s ease;
+     padding: 2px;
+     margin: 10px;
+}
+
+.company_img:hover {
+     filter: grayscale(0%);
+}
+
+
+.success_history_container {
+     height: auto;
+     background-color: #91ddf4;
+     width: 100%;
+     padding: 10px;
+     display: flex;
+     flex-direction: column;
+     align-items: left;
+     justify-content: center;
+
+}
+
+.success_history .full_width_line {
+     margin: 15px 0;
+}
+
+.success_history {
+     margin: 20px 0px 40px 30px;
+     max-width: 900px;
+}
+
+.success_history_title {
+     font-size: 40px;
+}
+
+.video_container {
+     display: flex;
+     flex-direction: row;
+     flex-wrap: wrap;
+     justify-content: right;
+     align-items: center;
+     margin-top: 30px;
+     width: 100%;
+}
+
+.video_container iframe {
+     width: 280px;
+     height: 345px;
+     border: #000000 4px solid;
+     margin: 10px 30px;
+     border-radius: 15px;
+}
+
+.certificates_container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     margin: 30px 0px;
+
+}
+
+.certificates {
+     width: 100%;
+}
+
+.slide_image {
+     border: 1px solid #000000;
+     width: 300px;
+     height: 100px;
+     background-position: center;
+     background-size: cover;
+     display: inline-block;
+     transition: transform 1s ease;
+}
+
+#carousel {
+     position: relative;
+     overflow: hidden;
+     width: 1200px;
+     height: 100px;
+     margin: 20px 10px;
+}
+
+#carousel_inner {
+     white-space: nowrap;
+     transition: transform 1s ease;
+     display: inline-block;
+}
+
+#slide1 {
+     background-image: url('/images/salesforce.png');
+}
+
+#slide2 {
+     background-image: url('/images/microsoft.png');
+}
+
+#slide3 {
+     background-image: url('/images/google.jpg');
+}
+
+#slide4 {
+     background-image: url('/images/aws.jpg');
+}
+
+#slide5 {
+     background-image: url('/images/mulesoft.jpg');
+}
+
+.certificates_text {
+     text-align: justify;
+     margin: 10px;
+     width: 60%;
+}
+
+
+
+
+@media screen and (max-width: 1300px) {
+     .services {
+          margin: 10px;
+          padding: 5px;
+          height: auto;
+          width: 80vw;
+     }
+
+     .service_title {
+          font-size: 35px;
+     }
+
+     .service_text {
+          margin-left: 10px;
+          height: auto;
+     }
+
+     .services_photo {
+          height: 280px;
+          width: 450px;
+     }
+
+     .services_container {
+          flex-wrap: wrap;
+          justify-content: center;
+     }
+
+     #carousel {
+          width: 900px;
+     }
+}
+
+@media screen and (max-width: 950px) {
+  
+
+    
+     .services_container {
+          flex-direction: column;
+     }
+
+     .services {
+          align-items: center;
+     }
+
+     .service_title,
+     .service_text {
+          text-align: justify;
+     }
+
+     .companies_container {
+          justify-content: space-around;
+          margin: 20px 150px;
+          
+      }
+      .company_img {
+          max-width: calc(100vw/5) - 20px; 
+      }
+      
+
+      
+     #carousel {
+          width: 600px;
+     }
+}
+
+@media screen and (max-width: 700px) {
+     .service_title {
+          font-size: 30px;
+     }
+
+     .services_photo {
+          height: 240px;
+          width: 400px;
+     }
+     .companies_container {
+          flex-direction: column;
+          align-items: center;
+      }
+  
+      .company_img {
+          margin: 20px; 
+          height: 72px;
+          width: 130px;
+      }
+
+     #carousel {
+          width: 300px;
+     }
+}

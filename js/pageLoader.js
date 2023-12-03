@@ -13,6 +13,7 @@
                     initializeSlider();
                     numberAnimator();
                     dynamicList();
+                    logoCarousel();
                 })
                 .catch(error => console.error('Błąd ładowania strony', error));
         });
