@@ -8,6 +8,7 @@
      flex-direction: row;
      align-items: center;
      justify-content: space-evenly;
+     margin: 0 80px;
 }
 
 .services {
@@ -38,7 +39,6 @@
      border-radius: 15%;
      -webkit-mask-image: -webkit-radial-gradient(center, ellipse, white 40%, transparent 72%);
      mask-image: radial-gradient(ellipse at center, white 60%, transparent 70%);
-
 }
 
 .companies_container {
@@ -67,12 +67,12 @@
 .success_history_container {
      height: auto;
      background-color: #91ddf4;
-     width: 100%;
-     padding: 10px;
+     padding: 20px;
      display: flex;
      flex-direction: column;
-     align-items: left;
      justify-content: center;
+     align-items: center;
+     
 }
 
 .success_history .full_width_line {
@@ -80,22 +80,39 @@
 }
 
 .success_history {
-     margin: 20px 0px 40px 30px;
-     max-width: 900px;
+     height: auto;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
 }
 
 .success_history_title {
      font-size: 40px;
+     display: flex;
+     flex-direction: column;
+}
+
+.management_team_intro .full_width_line {
+     width: 50%;
+     height: 2px;
+     background-color: black;
+}
+
+.success_history_text {
+     display: flex;
+     flex-direction: row;
+     margin: 25px 35px;
+     height: auto;
+     text-align: justify;
 }
 
 .video_container {
      display: flex;
      flex-direction: row;
      flex-wrap: wrap;
-     justify-content: right;
+     justify-content: center;
      align-items: center;
-     margin-top: 30px;
-     width: 100%;
 }
 
 .video_container iframe {
@@ -195,6 +212,22 @@
      .services_container {
           flex-wrap: wrap;
           justify-content: center;
+     }
+
+     .success_history {
+          margin: 10px;
+          padding: 5px;
+          height: auto;
+          width: 80vw;
+     }
+
+     .success_history_title {
+          font-size: 35px;
+     }
+
+     .success_history_text {
+          margin-left: 10px;
+          height: auto;
      }
 
      #carousel {
