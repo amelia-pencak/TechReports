@@ -1,5 +1,4 @@
 .about_us_page {
-
      display: flex;
      flex-direction: column;
 }
@@ -11,7 +10,6 @@
 }
 
 .about_us_container {
-
      display: flex;
      flex-direction: row;
      justify-content: space-evenly;
@@ -70,7 +68,6 @@
 .management_team {
      display: flex;
      flex-direction: column;
-
 }
 
 .management_team_intro {
@@ -78,7 +75,6 @@
      background-color: #91ddf4;
      width: 100%;
      margin: 20px 0px 40px 0px;
-
 }
 
 .management_title {
@@ -125,7 +121,6 @@
      -webkit-box-shadow: 0px 0px 67px 60px #91ddf4;
      -moz-box-shadow: 0px 0px 67px 60px #91ddf4;
      box-shadow: 0px 0px 67px 60px #91ddf4;
-
 }
 
 .management_card_info {
@@ -156,7 +151,6 @@
      display: flex;
      justify-content: center;
      align-items: center;
-   
 }
 
 .photo {

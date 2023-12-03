@@ -48,13 +48,11 @@
 .technologies {
      padding: 10px;
      margin: 15px;
-     /* max-width: 750px; */
      display: flex;
      flex-direction: column;
      justify-content: space-evenly;
      align-items: center;
      max-width: 650px;
-     /* width: 100%; */
 }
 
 .technologies_title {
@@ -94,9 +92,8 @@
 }
 
 .technology_list li.active {
-     background-color:  #0d1f87;
+     background-color: #0d1f87;
      color: white;
-     /* background-color:  #09A4EB; */
 }
 
 .technology_details {
@@ -115,7 +112,6 @@
      flex-direction: column;
      justify-content: center;
      align-items: center;
-     /* margin: 15px 25px 20px 25px; */
      max-width: 1500px;
 
 }
@@ -127,51 +123,42 @@
      align-items: center;
      flex-wrap: wrap;
      width: 100%;
-     /* margin: 15px 25px 20px 25px; */
 }
 
 .benefit_card {
-     /* flex-basis: 45%;  */
-     /* box-shadow: 0 4px 8px rgba(0,0,0,0.1);  */
-     margin: 10px 50px; 
-     padding: 20px; 
-     text-align: left; 
+     margin: 10px 50px;
+     padding: 20px;
+     text-align: left;
      max-width: 450px;
- }
- 
- .benefit_card_number {
+}
+
+.benefit_card_number {
      display: flex;
      justify-content: center;
      border-radius: 10px;
      align-items: center;
      background-color: #b8c2fa;
-     /* background-color: #586bd4; */
      width: 40px;
      height: 40px;
- }
- 
- .number_card {
+}
+
+.number_card {
      position: relative;
-     font-size: 24px; 
-     font-weight: bold; 
-     line-height: 1;
- }
- 
- .benefit_card_title {
-     font-size: 18px; 
-     margin-top: 20px; 
+     font-size: 24px;
      font-weight: bold;
- }
- 
- .benefit_card_text {
-     font-size: 14px; 
+     line-height: 1;
+}
+
+.benefit_card_title {
+     font-size: 18px;
+     margin-top: 20px;
+     font-weight: bold;
+}
+
+.benefit_card_text {
+     font-size: 14px;
      margin-top: 10px;
- }
-
-
-
-
-
+}
 
 @media screen and (max-width: 980px) {
      .technologies_page {
@@ -189,9 +176,10 @@
           filter: blur(50px);
      }
 
-     .technology_details, .technology_list {
+     .technology_details,
+     .technology_list {
           margin: 10px 0;
-      }
+     }
 
      .technologies_photo2 {
           max-width: 93%;
@@ -217,34 +205,38 @@
 }
 
 @media screen and (max-width: 768px) {
-     .technologies_and_list, .technologies_container {
-         flex-direction: column;
+
+     .technologies_and_list,
+     .technologies_container {
+          flex-direction: column;
      }
- 
-     .technology_details, .technology_list {
-         margin: 10px 0;
+
+     .technology_details,
+     .technology_list {
+          margin: 10px 0;
      }
- 
+
      .technologies_photo_container {
-         width: auto; 
-         height: auto; 
+          width: auto;
+          height: auto;
      }
- 
+
      .technologies_photo {
-         min-width: auto; 
+          min-width: auto;
      }
- 
+
      .technologies_title {
-         font-size: 30px;
+          font-size: 30px;
      }
- 
-     .technologies_text, .technology_details {
-         margin-left: 10px;
-         margin-right: 10px;
+
+     .technologies_text,
+     .technology_details {
+          margin-left: 10px;
+          margin-right: 10px;
      }
 
      .technology_details {
           width: auto;
           max-width: 500px;
      }
- }
+}

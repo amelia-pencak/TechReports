@@ -70,7 +70,6 @@ td {
      padding: 4px;
 }
 
-
 .container {
      display: flex;
      justify-content: center;
@@ -90,7 +89,6 @@ td {
      height: 100%;
      position: relative;
      left: -100%;
-
 }
 
 .slide {

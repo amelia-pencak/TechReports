@@ -1,5 +1,4 @@
 .services_page {
-
      display: flex;
      flex-direction: column;
 }
@@ -74,7 +73,6 @@
      flex-direction: column;
      align-items: left;
      justify-content: center;
-
 }
 
 .success_history .full_width_line {
@@ -172,8 +170,6 @@
 }
 
 
-
-
 @media screen and (max-width: 1300px) {
      .services {
           margin: 10px;
@@ -207,9 +203,6 @@
 }
 
 @media screen and (max-width: 950px) {
-  
-
-    
      .services_container {
           flex-direction: column;
      }
@@ -226,14 +219,12 @@
      .companies_container {
           justify-content: space-around;
           margin: 20px 150px;
-          
-      }
-      .company_img {
-          max-width: calc(100vw/5) - 20px; 
-      }
-      
+     }
 
-      
+     .company_img {
+          max-width: calc(100vw/5) - 20px;
+     }
+
      #carousel {
           width: 600px;
      }
@@ -248,16 +239,17 @@
           height: 240px;
           width: 400px;
      }
+
      .companies_container {
           flex-direction: column;
           align-items: center;
-      }
-  
-      .company_img {
-          margin: 20px; 
+     }
+
+     .company_img {
+          margin: 20px;
           height: 72px;
           width: 130px;
-      }
+     }
 
      #carousel {
           width: 300px;
