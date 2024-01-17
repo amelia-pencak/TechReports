@@ -1,6 +1,6 @@
 function initializeSlider() {
-     var inWrap = $('.inner_wrapper'),
-          $slide = $('.slide');
+     var inWrap = $('.inner_wrapper');
+          // $slide = $('.slide');
 
      function slideNext() {
           inWrap.animate({ left: '-200%' }, 200, function () {
@@ -18,7 +18,6 @@ function initializeSlider() {
      });
 
      $('.next').on('click', function () {
-          clearInterval(sliderInterval);
           slideNext();
      });
 

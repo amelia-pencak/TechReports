@@ -1,6 +1,7 @@
 .services_page {
      display: flex;
      flex-direction: column;
+     overflow: hidden;
 }
 
 .services_container {

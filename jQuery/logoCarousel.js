@@ -2,11 +2,9 @@ function logoCarousel() {
       
      $(document).ready(function() {
           var $carouselInner = $('#carousel_inner');
-          var interval, width;
+          var width;
       
-          function startRotation() {
-            interval = window.setInterval(rotateSlides, 2000); 
-          }
+           window.setInterval(rotateSlides, 2000); 
 
           function rotateSlides() {
             if (!width) {
@@ -17,13 +15,11 @@ function logoCarousel() {
             setTimeout(function() {
               $carouselInner.append($carouselInner.find('div:first'));
               $carouselInner.css({ 'transition': 'none', 'transform': 'translateX(0)' });
-              $carouselInner[0].offsetHeight;
+              $carouselInner[0].offsetHeight; //Reflow
       
               $carouselInner.css('transition', 'transform 1s ease');
             }, 1000); 
           }
-          $carouselInner.css('transition', 'transform 1s ease');
-          startRotation();
         });
 
 
