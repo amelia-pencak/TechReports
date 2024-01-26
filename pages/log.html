@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+     <title>TechReports</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- <script src="./js/isLogin.js"></script> -->
+
+     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+</head>
+
+<body>
+     
+     <div class="log_page">
+          <div class="split_left">
+               <div class="centered">
+                    <div class="form-container">
+                         <div class="form-box_left">
+                              <h2>Zaloguj się</h2>
+                              <form id="loginForm" action="http://localhost/TechReports/php/login.php" method="post">
+                                   <input type="email" name="email" placeholder="Email" required>
+                                   <input type="password" name="password" placeholder="Password" required>
+                                   <input type="submit" value="Zaloguj się">
+                                   <div class="switch">
+                                        Nie masz konta? <a href="#register">Zarejestruj się</a>
+                                   </div>
+                              </form>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <div class="divider">
+               <p>lub</p>
+          </div>
+
+          <div class="split_right">
+               <div class="centered">
+                    <div class="form-container">
+                         <div class="form-box" id="register">
+                              <h2>Zarejestruj się</h2>
+                              <form action="http://localhost/TechReports/php/register.php" method="post">
+                                   <input type="text" name="firstname" placeholder="Imię">
+                                   <input type="text" name="lastname" placeholder="Nazwisko">
+                                   <input type="email" name="email" placeholder="Email" required>
+                                   <input type="password" name="password" placeholder="Password" required>
+                                   <input type="text" name="country" placeholder="Kraj">
+                                   <input type="text" name="city" placeholder="Miasto">
+                                   <input type="submit" value="Zarejestruj się">
+                                   <div class="switch">
+                                        Masz już konto? <a href="#login">Zaloguj się</a>
+                                   </div>
+                              </form>
+                         </div>
+                    </div>
+               </div>
+          </div>
+
+
+     </div>
+</body>

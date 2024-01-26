@@ -14,8 +14,10 @@
                     numberAnimator();
                     dynamicList();
                     logoCarousel();
+                    setUpLoginForm();
                 })
                 .catch(error => console.error('Błąd ładowania strony', error));
         });
     });
 });
+
