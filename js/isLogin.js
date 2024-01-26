@@ -1,5 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Strona została załadowansssa');
     checkLoginStatusAndUpdateLink();
     setUpLoginForm();
     console.log('Strona została załadowana');
@@ -30,11 +31,20 @@ function handleLogin(form) {
             'Accept': 'application/json',
         }
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(data => {
+        console.log(data);
         if (data.success) {
             console.log('Zalogowano poprawnie');
-            // window.location.href = 'http://127.0.0.1:5501/index.html'; 
+            localStorage.setItem('token', data.token);
+            // window.location.href = '../index.html';
+            loadPage('pages/profile.html');
+
             checkLoginStatusAndUpdateLink(); // Ponownie sprawdź status logowania
         } else {
             console.error('Błąd logowania:', data.message);
@@ -44,21 +54,25 @@ function handleLogin(form) {
 }
 
 function checkLoginStatusAndUpdateLink() {
-    fetch('http://localhost/TechReports/php/isLog.php')
-        .then(response => response.text())  // najpierw odbierz jako tekst
-        .then(text => {
-            console.log(text);  // wyświetl tekst w konsoli
-            return JSON.parse(text);  // następnie przekształć na JSON
-
-       
-        })
-        .then(data => {
-            if (data.loggedIn) {
-                document.getElementById('loginLink').setAttribute('href', 'pages/profile.html');
-            } else {
+    const token = localStorage.getItem('token');
+    if (token) {
+        fetch(`http://localhost/TechReports/php/isLog.php?token=${encodeURIComponent(token)}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.loggedIn) {
+                    document.getElementById('loginLink').setAttribute('href', 'pages/profile.html');
+                } else {
+                    localStorage.removeItem('token'); // Usuwamy token, jeśli nie jest ważny
+                    document.getElementById('loginLink').setAttribute('href', 'pages/log.html');
+                }
+            })
+            .catch(error => {
+                console.error('Błąd sprawdzania statusu logowania', error);
+                localStorage.removeItem('token'); // Usuwamy token w przypadku błędu
                 document.getElementById('loginLink').setAttribute('href', 'pages/log.html');
-            }
-        })
-        .catch(error => console.error('Błąd sprawdzania statusu logowania', error));
+            });
+    } else {
+        document.getElementById('loginLink').setAttribute('href', 'pages/log.html');
+    }
 }
 

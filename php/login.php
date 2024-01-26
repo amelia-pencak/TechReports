@@ -1,9 +1,10 @@
 <?php
+ini_set('display_errors', 0);
 session_start();
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: http://127.0.0.1:5501');
-var_dump(session_id());
-var_dump($_SESSION);
+// var_dump(session_id());
+// var_dump($_SESSION);
 
 
 
@@ -28,7 +29,8 @@ if ($result->num_rows > 0) {
      $row = $result->fetch_assoc();
      if (password_verify($password, $row['password'])) {
           $_SESSION['user_id'] = $row['id'];  // Ustawienie ID użytkownika w sesji
-          echo json_encode(["success" => true, "message" => "Logged in successfully"]);
+          $_SESSION['token'] = bin2hex(random_bytes(16));
+          echo json_encode(["success" => true, "message" => "Logged in successfully", "token" => $_SESSION['token']]);
           // header('Location: http://127.0.0.1:5501/index.html');
           exit;
      } else {
