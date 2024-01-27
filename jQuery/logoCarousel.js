@@ -15,7 +15,7 @@ function logoCarousel() {
             setTimeout(function() {
               $carouselInner.append($carouselInner.find('div:first'));
               $carouselInner.css({ 'transition': 'none', 'transform': 'translateX(0)' });
-              $carouselInner[0].offsetHeight; //Reflow
+              // $carouselInner[0].offsetHeight; //Reflow
       
               $carouselInner.css('transition', 'transform 1s ease');
             }, 1000); 

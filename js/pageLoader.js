@@ -18,13 +18,17 @@ function loadPage(url) {
         .then(response => response.text())
         .then(data => {
             document.getElementById('content').innerHTML = data;
-            // Tutaj dodaj wszelkie potrzebne inicjalizacje skryptów dla nowo załadowanej strony
             initializeSlider();
             numberAnimator();
             dynamicList();
             logoCarousel();
             setUpLoginForm();
             checkLoginStatusAndUpdateLink();
+            if (url.endsWith('profile.html')) {
+                loadData();
+                addLogoutEvent() ;
+            }
+            
         })
         .catch(error => console.error('Błąd ładowania strony', error));
 }

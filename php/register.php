@@ -25,8 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
      if($conn->query($sql) === TRUE) {
-          echo "New record created successfully";
-          
+//           echo json_encode(["success" => true]);
+//     exit;
+
           header('Location: http://127.0.0.1:5501/index.html');
         exit;
      } else {

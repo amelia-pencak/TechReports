@@ -1,24 +1,19 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('Strona została załadowansssa');
     checkLoginStatusAndUpdateLink();
     setUpLoginForm();
-    console.log('Strona została załadowana');
 });
 
 function setUpLoginForm() {
     // const loginForm = document.querySelector('form-box_left'); // Zakładam, że masz taki selektor
     const loginForm = document.getElementById('loginForm');
 
-    console.log(loginForm);
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            console.log('Formularz logowania został wysłany');
             handleLogin(loginForm);
         });
     } else {
-        console.log("Formularz nie został znaleziony.");
     }
 }
 
@@ -40,9 +35,8 @@ function handleLogin(form) {
     .then(data => {
         console.log(data);
         if (data.success) {
-            console.log('Zalogowano poprawnie');
             localStorage.setItem('token', data.token);
-            // window.location.href = '../index.html';
+           
             loadPage('pages/profile.html');
 
             checkLoginStatusAndUpdateLink(); // Ponownie sprawdź status logowania
@@ -61,6 +55,7 @@ function checkLoginStatusAndUpdateLink() {
             .then(data => {
                 if (data.loggedIn) {
                     document.getElementById('loginLink').setAttribute('href', 'pages/profile.html');
+                   
                 } else {
                     localStorage.removeItem('token'); // Usuwamy token, jeśli nie jest ważny
                     document.getElementById('loginLink').setAttribute('href', 'pages/log.html');
