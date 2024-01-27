@@ -27,6 +27,7 @@ function loadPage(url) {
             if (url.endsWith('profile.html')) {
                 loadData();
                 addLogoutEvent() ;
+                setUpEditProfileForm();
             }
             
         })

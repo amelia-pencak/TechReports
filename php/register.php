@@ -19,6 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
      $country = $conn->real_escape_string($_POST['country']);
      $city = $conn->real_escape_string($_POST['city']);
+     
 
      $sql = "INSERT INTO users (firstname, lastname, email, password, country, city)
       VALUES ('$firstname', '$lastname', '$email', '$password', '$country', '$city')";

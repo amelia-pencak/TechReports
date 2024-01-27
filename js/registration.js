@@ -13,7 +13,7 @@
 //      fetch('http://localhost/TechReports/php/register.php', {
 //          method: 'POST',
 //          body: new FormData(form),
-//          headers: {
+//      //     headers: 
 //              'Accept': 'application/json',
 //          }
 //      })
