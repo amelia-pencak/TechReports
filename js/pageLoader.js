@@ -28,6 +28,7 @@ function loadPage(url) {
                 loadData();
                 addLogoutEvent() ;
                 setUpEditProfileForm();
+                findSubmit();
             }
             
         })

@@ -1,26 +1,67 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <title>TechReports</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <div class="profile_page">
-        <section class="user-profile">
-            <h2>Profil Użytkownika</h2>
-            <form id="editProfileForm">
-                <input type="text" id="editFirstName" name="firstname" placeholder="Imię">
-                <input type="text" id="editLastName" name="lastname" placeholder="Nazwisko">
-                <input type="email" id="editEmail" name="email" placeholder="Email">
-                <input type="text" id="editCountry" name="country" placeholder="Kraj">
-                <input type="text" id="editCity" name="city" placeholder="Miasto">
-                <input type="text" id="created_at" name="created_at" placeholder="Data utworzenia" readonly>
-                <button type="submit">Zapisz zmiany</button>
-            </form>
-            <button id="deleteProfileButton">Usuń profil</button>
-            <button id="logoutButton">Wyloguj</button>
-        </section>
-    </div>
 
+<head>
+     <title>TechReports</title>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+     <div class="profile_page">
+          <section class="user-profile">
+               <div class="profile_container_outside">
+               <div class="profile_container">
+                   
+                         <h2>Profil Użytkownika</h2>
+                         <form id="editProfileForm">
+                              <label for="editFirstName">Imię:</label>
+                              <input type="text" id="editFirstName" name="firstname" placeholder="Imię">
+
+                              <label for="editLastName">Nazwisko:</label>
+                              <input type="text" id="editLastName" name="lastname" placeholder="Nazwisko">
+
+                              <label for="editEmail">Email:</label>
+                              <input type="email" id="editEmail" name="email" placeholder="Email">
+
+                              <label for="editCountry">Kraj:</label>
+                              <input type="text" id="editCountry" name="country" placeholder="Kraj">
+
+                              <label for="editCity">Miasto:</label>
+                              <input type="text" id="editCity" name="city" placeholder="Miasto">
+
+                              <label for="created_at">Data utworzenia:</label>
+                              <input type="text" id="created_at" name="created_at" placeholder="Data utworzenia"
+                                   readonly>
+
+                             
+                         </form>
+                    </div>
+                   
+               </div>
+               <button type="submit">Zapisz zmiany</button>
+               <button id="deleteProfileButton">Usuń profil</button>
+               <button id="logoutButton">Wyloguj</button>
+
+
+             
+          </section>
+          <section class="message-section">
+               <form id="messageForm">
+                   <label for="messageTitle">Tytuł:</label>
+                   <input type="text" id="messageTitle" name="title" placeholder="Tytuł wiadomości" required>
+   
+                   <label for="messageContent">Treść:</label>
+                   <textarea id="messageContent" name="contents" placeholder="Treść wiadomości" required></textarea>
+   
+                   <label for="messageFile">Plik:</label>
+                   <input type="file" id="messageFile" name="files">
+   
+                   <button type="submit" id="sendMessage">Wyślij wiadomość</button>
+               </form>
+   
+               <div id="messagesDisplay"></div>
+           </section>
+     </div>
 </body>
+
 </html>
