@@ -21,20 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
          console.error('Błąd połączenia:', error);
      });
  }
- 
-//  function displayMessages(messages) {
-//      const messagesContainer = document.getElementById('messagesContainer');
-//      messages.forEach(message => {
-//          const messageDiv = document.createElement('div');
-//          messageDiv.innerHTML = `
-//              <h3>${message.firstname} ${message.lastname}</h3>
-//              <h4>${message.title}</h4>
-//              <p>${message.contents}</p>
-//              ${message.files ? `<a href="${message.files}" download>Pobierz załącznik</a>` : ''}
-//          `;
-//          messagesContainer.appendChild(messageDiv);
-//      });
-//  }
 
 function displayMessages(messages) {
     const messagesContainer = document.getElementById('messagesContainer');
@@ -46,13 +32,13 @@ function displayMessages(messages) {
 
         let filesHtml = '';
         if (message.files) {
-            // Zakładam, że 'files' jest tablicą. Możesz dostosować to do swojej struktury danych.
             filesHtml = message.files.map(file => `<a href="${file}" download>Pobierz załącznik</a>`).join('<br>');
         }
 
         messageDiv.innerHTML = `
             <h3>${message.title}</h3>
             <p>Autor: ${message.firstname} ${message.lastname}</p>
+            <p>Data wysłania: ${new Date(message.sent_at).toLocaleString()}</p>
             <p>${message.contents}</p>
             ${filesHtml}
         `;

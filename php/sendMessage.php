@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Przygotowanie zapytania SQL
-    $stmt = $conn->prepare("INSERT INTO messages (id_user, title, contents, files) VALUES (?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO messages (id_user, title, contents, files, sent_at) VALUES (?, ?, ?, ?, NOW())");
     $null = NULL;
     $stmt->bind_param("sssb", $id_user, $title, $contents, $null);
     $stmt->send_long_data(3, $file_content); // Wysyłanie danych BLOB
