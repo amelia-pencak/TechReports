@@ -10,8 +10,8 @@
      <div class="profile_page">
           <section class="user-profile">
                <div class="profile_container_outside">
-               <div class="profile_container">
-                   
+                    <div class="profile_container">
+
                          <h2>Profil Użytkownika</h2>
                          <form id="editProfileForm">
                               <label for="editFirstName">Imię:</label>
@@ -23,44 +23,56 @@
                               <label for="editEmail">Email:</label>
                               <input type="email" id="editEmail" name="email" placeholder="Email">
 
+                              <label for="editPhone">Telefon:</label>
+                              <input type="text" id="editPhone" name="phone" placeholder="Telefon">
+
+                              <label for="created_at">Data utworzenia:</label>
+                              <input type="text" id="created_at" name="created_at" placeholder="Data utworzenia"
+                                   readonly>
+
                               <label for="editCountry">Kraj:</label>
                               <input type="text" id="editCountry" name="country" placeholder="Kraj">
 
                               <label for="editCity">Miasto:</label>
                               <input type="text" id="editCity" name="city" placeholder="Miasto">
 
-                              <label for="created_at">Data utworzenia:</label>
-                              <input type="text" id="created_at" name="created_at" placeholder="Data utworzenia"
-                                   readonly>
+                              <label for="editStreet">Ulica:</label>
+                              <input type="text" id="editStreet" name="street" placeholder="Ulica">
 
-                             
+                              <label for="editStreetNumber">Numer ulicy:</label>
+                              <input type="text" id="editStreetNumber" name="streetnumber" placeholder="Numer domu">
+
+                              <label for="editPostalCode">Kod pocztowy:</label>
+                              <input type="text" id="editPostalCode" name="postalcode" placeholder="Kod pocztowy">
+
+                              <button type="submit">Zapisz zmiany</button>
                          </form>
                     </div>
-                   
+
                </div>
-               <button type="submit">Zapisz zmiany</button>
+              
                <button id="deleteProfileButton">Usuń profil</button>
                <button id="logoutButton">Wyloguj</button>
 
 
-             
+
           </section>
           <section class="message-section">
                <form id="messageForm">
-                   <label for="messageTitle">Tytuł:</label>
-                   <input type="text" id="messageTitle" name="title" placeholder="Tytuł wiadomości" required>
-   
-                   <label for="messageContent">Treść:</label>
-                   <textarea id="messageContent" name="contents" placeholder="Treść wiadomości" required></textarea>
-   
-                   <label for="messageFile">Plik:</label>
-                   <input type="file" id="messageFile" name="files">
-   
-                   <button type="submit" id="sendMessage">Wyślij wiadomość</button>
+                    <label for="messageTitle">Tytuł:</label>
+                    <input type="text" id="messageTitle" name="title" placeholder="Tytuł wiadomości" required>
+
+                    <label for="messageContent">Treść:</label>
+                    <textarea id="messageContent" name="contents" placeholder="Treść wiadomości" required></textarea>
+
+                    <label for="messageFile">Plik:</label>
+                    <input type="file" id="messageFile" name="files">
+
+                    <button type="submit" id="sendMessage">Wyślij wiadomość</button>
                </form>
-   
-               <div id="messagesDisplay"></div>
-           </section>
+
+               <div id="messagesContainer"></div>
+          </section>
      </div>
 </body>
 

@@ -17,12 +17,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
      $lastname = $conn->real_escape_string($_POST['lastname']);
      $email = $conn->real_escape_string($_POST['email']);
      $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
-     $country = $conn->real_escape_string($_POST['country']);
-     $city = $conn->real_escape_string($_POST['city']);
+     $phone = $conn->real_escape_string($_POST['phone']);
      
 
-     $sql = "INSERT INTO users (firstname, lastname, email, password, country, city)
-      VALUES ('$firstname', '$lastname', '$email', '$password', '$country', '$city')";
+     $sql = "INSERT INTO users (firstname, lastname, email, password, phone)
+      VALUES ('$firstname', '$lastname', '$email', '$password',  '$phone')";
 
 
      if($conn->query($sql) === TRUE) {

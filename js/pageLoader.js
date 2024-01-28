@@ -29,6 +29,7 @@ function loadPage(url) {
                 addLogoutEvent() ;
                 setUpEditProfileForm();
                 findSubmit();
+                loadMessages();
             }
             
         })
