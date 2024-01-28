@@ -38,13 +38,29 @@ function handleLogin(form) {
             localStorage.setItem('token', data.token);
            
             loadPage('pages/profile.html');
-
+            new Toast({
+                message: 'Zalogowano pomyślnie.',
+                type: 'success'
+              });
             checkLoginStatusAndUpdateLink(); // Ponownie sprawdź status logowania
         } else {
             console.error('Błąd logowania:', data.message);
+            new Toast({
+                message: 'Błąd logowania. Nieprawidłowy login lub hasło.',
+                type: 'warning'
+              });
+              document.getElementById('loginForm').reset();  
         }
     })
-    .catch(error => console.error('Błąd połączenia', error));
+    .catch(error => {
+        console.error('Błąd połączenia', error);
+        // Wyświetlenie powiadomienia toast w przypadku błędu sieciowego
+        new Toast({
+            message: 'Błąd logowania.',
+            type: 'warning'
+        });
+        document.getElementById('loginForm').reset(); 
+    });
 }
 
 function checkLoginStatusAndUpdateLink() {

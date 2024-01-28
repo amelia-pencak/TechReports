@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   loadData();
   addLogoutEvent();
   setUpEditProfileForm();
+  deleteProfile() ;
   console.log('Strona została załadowana.');
 });
 
@@ -14,12 +15,52 @@ function addLogoutEvent() {
       localStorage.removeItem('userData');
       localStorage.removeItem('addressData');
       loadPage('pages/log.html');// Przekierowanie do strony logowania
+      new Toast({
+        message: 'Użytkownik został wylogowany.',
+        type: 'success'
+      });
       console.log('Wylogowano.');
     });
   } else {
     console.log('Przycisk wylogowania nie został znaleziony.');
   }
 }
+
+function deleteProfile() {
+  const deleteProfileButton = document.getElementById('deleteProfileButton');
+  const token = localStorage.getItem('token');
+  if (!token) {
+    console.error('Brak tokenu, nie można usunąć profilu');
+    return;
+  }
+  deleteProfileButton.addEventListener('click', function () {
+    fetch(`http://localhost/TechReports/php/deleteProfile.php?token=${token}`, {
+      method: 'POST'
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log("usuw",data);
+        if (data.success) {
+          console.log('Profil został usunięty.');
+          localStorage.removeItem('token');
+      localStorage.removeItem('userData');
+      localStorage.removeItem('addressData');
+      loadPage('pages/log.html');
+      new Toast({
+        message: 'Profil został usunięty.',
+        type: 'success'
+      });
+        } else {
+          console.error('Błąd podczas usuwania profilu:', data.error);
+        }
+      })
+      .catch(error => {
+        console.error('Błąd połączenia:', error);
+      });
+  });
+}
+
+
 
 function loadData() {
   let storedData = localStorage.getItem('userData');
@@ -37,6 +78,7 @@ function loadData() {
       .then(data => {
         if (data && 'error' in data) {
           console.error(data.error);
+          
         } else {
           localStorage.setItem('userData', JSON.stringify(data.userData));
           localStorage.setItem('addressData', JSON.stringify(data.addressData));
@@ -76,7 +118,7 @@ function setUpEditProfileForm() {
       console.log(new FormData(editForm));
       console.log("Wysyłanie formularzaaaa", editForm);
       handleProfileEdit(new FormData(editForm));
-      
+
     });
   }
 }
@@ -84,8 +126,6 @@ function setUpEditProfileForm() {
 function handleProfileEdit(formData) {
   const token = localStorage.getItem('token');
   formData.append('token', token);
-  console.log("Wysyłanie danych formularza", formData);
-  console.log("token", token);
 
   fetch(`http://localhost/TechReports/php/edit.php?token=${token}`, {
     method: 'POST',
@@ -95,33 +135,35 @@ function handleProfileEdit(formData) {
       if (!response.ok) {
         throw new Error('Network response was not ok', response);
       }
-      console.log("odpPP" , response);
       return response.json();
     })
     .then(data => {
-      console.log("odps" , data);  
       if (data.success) {
-        console.log('Profil został zaktualizowany.');
+        new Toast({
+          message: 'Dane zostały zaktualizowane.',
+          type: 'success'
+        });
         fetch(`http://localhost/TechReports/php/profile.php?token=${token}`)
-        .then(response => {
-          if (!response.ok) {
-            throw new Error('Network response was not ok');
-          }
-          console.log("odp" , response);
-          return response.json();
-        })
+          .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            console.log("odp", response);
+            return response.json();
+          })
           .then(updatedData => {
             localStorage.setItem('userData', JSON.stringify(updatedData.userData));
             localStorage.setItem('addressData', JSON.stringify(updatedData.addressData));
             console.log('Zaktualizowane dane użytkownika:', updatedData.userData);
             console.log('Zaktualizowane dane adresowe:', updatedData.addressData);
-        
-        
+
+
             displayUserData(updatedData.userData); // Aktualizacja danych użytkownika na stronie
             displayAddressData(updatedData.addressData);
           });
       } else {
-        console.error('Błąd podczas aktualizacji profilu:', data.error);
+        toastr.error('Błąd podczas aktualizacji profilu: ' + data.error);
+
       }
     })
     .catch(error => {

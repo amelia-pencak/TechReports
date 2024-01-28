@@ -30,6 +30,7 @@ function loadPage(url) {
                 setUpEditProfileForm();
                 findSubmit();
                 loadMessages();
+                deleteProfile() ;
             }
             
         })
