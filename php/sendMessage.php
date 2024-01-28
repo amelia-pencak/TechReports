@@ -6,6 +6,7 @@ header('Access-Control-Allow-Origin: *');
 
 header('Access-Control-Allow-Methods: GET, POST');
 header('Access-Control-Allow-Headers: Content-Type');
+ini_set('display_errors', 1);
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $servername = "localhost";
@@ -35,6 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $null = NULL;
     $stmt->bind_param("sssb", $id_user, $title, $contents, $null);
     $stmt->send_long_data(3, $file_content); // Wysyłanie danych BLOB
+   
 
     if ($stmt->execute()) {
         echo json_encode(["success" => true]);
