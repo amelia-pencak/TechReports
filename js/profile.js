@@ -14,7 +14,7 @@ function addLogoutEvent() {
       localStorage.removeItem('token');
       localStorage.removeItem('userData');
       localStorage.removeItem('addressData');
-      loadPage('pages/log.html');// Przekierowanie do strony logowania
+      loadPage('pages/log.html');
       new Toast({
         message: 'Użytkownik został wylogowany.',
         type: 'success'

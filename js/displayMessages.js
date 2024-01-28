@@ -36,10 +36,10 @@ function displayMessages(messages) {
         }
 
         messageDiv.innerHTML = `
-            <h3>${message.title}</h3>
-            <p>Autor: ${message.firstname} ${message.lastname}</p>
-            <p>Data wysłania: ${new Date(message.sent_at).toLocaleString()}</p>
-            <p>${message.contents}</p>
+            <h3 class="titleMessage">${message.title}</h3>
+            <p class="authorMessage">Autor: ${message.firstname} ${message.lastname}</p>
+            <p class="dateMessage">Data wysłania: ${new Date(message.sent_at).toLocaleString()}</p>
+            <p class="contentsMessage">${message.contents}</p>
             ${filesHtml}
         `;
         messagesContainer.appendChild(messageDiv);

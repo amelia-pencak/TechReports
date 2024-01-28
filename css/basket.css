@@ -1,0 +1,36 @@
+.servicesShop_page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 400px;
+    margin-bottom: 10px;
+}
+#uslugi div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 10px;
+ }
+
+ .usluga-container {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 10px; 
+ }
+
+ .usluga-item {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+ 
+ .buttonKoszyk {
+     margin-left: 5px;
+ }
+ 
+ button {
+     margin: 5px;
+ }
+ 

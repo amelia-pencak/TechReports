@@ -24,6 +24,9 @@ function loadPage(url) {
             logoCarousel();
             setUpLoginForm();
             checkLoginStatusAndUpdateLink();
+            if (url.endsWith('servicesShop.html')) {
+            basket();
+            }
             if (url.endsWith('profile.html')) {
                 loadData();
                 addLogoutEvent() ;
