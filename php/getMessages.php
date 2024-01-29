@@ -32,14 +32,9 @@ $result = $stmt->get_result();
 
 $messages = [];
 if ($result->num_rows > 0) {
-    // $messages = $result->fetch_all(MYSQLI_ASSOC); 
-    // for ($i = 0; $i < count($messages); $i++) {
 
-    //     $messages[$i]['files'] = json_decode($messages[$i]['files']);
-
-    // }
     while ($row = $result->fetch_assoc()) {
-        $row['files'] = base64_encode($row['files']); // Zakoduj zawartość pliku w base64
+        $row['files'] = base64_encode($row['files']);
         $messages[] = $row;
     }
     echo json_encode($messages); 

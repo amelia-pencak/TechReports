@@ -21,13 +21,11 @@ $stmt->bind_param("i", $message_id);
 $stmt->execute();
 $result = $stmt->get_result();
 
-// if ($result->num_rows > 0) {
-//     $row = $result->fetch_assoc();
-//     header('Content-Type: application/octet-stream');
-//     echo $row['files'];
+
 if ($result->num_rows > 0) {
      $row = $result->fetch_assoc();
      $file_content = base64_decode($row['files']);
+     $file_content = $row['files'];
      $file_name = $row['file_name'];
  
      header('Content-Type: application/octet-stream');

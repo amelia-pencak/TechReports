@@ -8,7 +8,8 @@
 }
 
 .profile_page {
-    max-width: 1000px;
+    min-width: 400px;
+    max-width: 500px;
     margin: 20px auto;
     padding: 20px;
     background-color: white;
@@ -25,8 +26,11 @@
     margin-bottom: 20px;
 }
 
+
+
 .profile_container,
 .message-section {
+    min-width: 350px;
     flex: 1;
     padding: 15px;
     border-radius: 8px;
