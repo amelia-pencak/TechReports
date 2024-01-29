@@ -13,6 +13,10 @@
      margin-bottom: 10px;
  }
 
+ #koszyk {
+     min-width: 500px;
+ }
+
  .usluga-container {
      display: flex;
      justify-content: space-between;
