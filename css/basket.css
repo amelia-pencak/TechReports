@@ -38,3 +38,43 @@
      margin: 5px;
  }
  
+
+ #uslugiForm {
+        display: flex;
+        flex-direction: column;
+        min-width: 400px;
+        align-items: center;
+        margin-bottom: 10px;
+        margin-top: 15px;
+ }
+
+ .usluga {
+        display: flex;
+        flex-direction: row;
+        min-width: 400px;
+        justify-content: space-between;
+        align-self: center;
+        margin-bottom: 10px;
+ }
+
+ span {
+    display: flex;
+    align-self: center;
+ }
+
+ .uslugaKoszyk {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+ }
+
+ .suma {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: large;
+    align-items: center;
+    margin-bottom: 10px;
+ }
