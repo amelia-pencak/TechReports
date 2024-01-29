@@ -5,33 +5,11 @@
     align-items: center;
     min-width: 400px;
     margin-bottom: 10px;
+    margin-top: 15px;;
 }
-#uslugi div {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     margin-bottom: 10px;
- }
 
  #koszyk {
      min-width: 500px;
- }
-
- .usluga-container {
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     margin-bottom: 10px; 
- }
-
- .usluga-item {
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;
- }
- 
- .buttonKoszyk {
-     margin-left: 5px;
  }
  
  button {
@@ -51,7 +29,7 @@
  .usluga {
         display: flex;
         flex-direction: row;
-        min-width: 400px;
+        min-width: 450px;
         justify-content: space-between;
         align-self: center;
         margin-bottom: 10px;
