@@ -28,16 +28,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $file_content = NULL;
 
     if (isset($_FILES['files']) && $_FILES['files']['error'] == 0) {
-        $file_name = $_FILES['files']['name']; // Pobierz nazwę pliku
+        $file_name = $_FILES['files']['name']; 
         $temp_name = $_FILES['files']['tmp_name'];
-        $file_content = file_get_contents($temp_name); // Odczytaj zawartość pliku
+        $file_content = file_get_contents($temp_name); 
     }
 
     $stmt = $conn->prepare("INSERT INTO messages (id_user, title, contents, file_name, files, sent_at) VALUES (?, ?, ?, ?, ?, NOW())");
     $null = NULL;
     $stmt->bind_param("ssssb", $id_user, $title, $contents, $file_name, $null);
     if ($file_content !== NULL) {
-        $stmt->send_long_data(4, $file_content); // Wysyłanie danych BLOB
+        $stmt->send_long_data(4, $file_content); 
     }
 
     if ($stmt->execute()) {
