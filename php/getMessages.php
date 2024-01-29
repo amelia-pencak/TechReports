@@ -25,18 +25,22 @@ if ($conn->connect_error) {
 
 $token1 = $_GET['token'];
 $token = (int)$token1;
-$stmt = $conn->prepare("SELECT m.title, m.contents, m.files, m.sent_at, u.firstname, u.lastname FROM messages m INNER JOIN users u ON m.id_user = u.id WHERE u.id = ?");
-error_log($conn->error);
+$stmt = $conn->prepare("SELECT m.id, m.title, m.contents, m.files,  m.file_name, m.sent_at, u.firstname, u.lastname FROM messages m INNER JOIN users u ON m.id_user = u.id WHERE u.id = ?");
 $stmt->bind_param("i", $token);
 $stmt->execute();
 $result = $stmt->get_result();
 
 $messages = [];
 if ($result->num_rows > 0) {
-    $messages = $result->fetch_all(MYSQLI_ASSOC); // Zbieranie wszystkich wierszy w tablicy asocjacyjnej
-    for ($i = 0; $i < count($messages); $i++) {
+    // $messages = $result->fetch_all(MYSQLI_ASSOC); 
+    // for ($i = 0; $i < count($messages); $i++) {
 
-        $messages[$i]['files'] = json_decode($messages[$i]['files']);
+    //     $messages[$i]['files'] = json_decode($messages[$i]['files']);
+
+    // }
+    while ($row = $result->fetch_assoc()) {
+        $row['files'] = base64_encode($row['files']); // Zakoduj zawartość pliku w base64
+        $messages[] = $row;
     }
     echo json_encode($messages); 
 } else {

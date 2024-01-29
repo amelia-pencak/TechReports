@@ -6,11 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
      const token = localStorage.getItem('token');
      fetch(`http://localhost/TechReports/php/getMessages.php?token=${token}`)
      .then(response => {
-        console.log(response); 
           return response.json();
       })
      .then(messages => {
-          console.log(messages);
          if (messages && !messages.error) {
              displayMessages(messages);
          } else {
@@ -24,15 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function displayMessages(messages) {
     const messagesContainer = document.getElementById('messagesContainer');
-    messagesContainer.innerHTML = ''; // Wyczyść poprzednie wiadomości
-
+    messagesContainer.innerHTML = ''; 
+    console.log(messages);
     messages.forEach(message => {
         const messageDiv = document.createElement('div');
         messageDiv.classList.add('message');
 
         let filesHtml = '';
-        if (message.files) {
-            filesHtml = message.files.map(file => `<a href="${file}" download>Pobierz załącznik</a>`).join('<br>');
+        console.log(message);
+            if (message.file_name) {
+                console.log(message.file_name);
+                console.log(message.id);
+            filesHtml = `<a href="http://localhost/TechReports/php/downloadFile.php?message_id=${message.id}" download>${message.file_name}</a>`;
+
         }
 
         messageDiv.innerHTML = `
